@@ -1,115 +1,120 @@
-SheShield - Women's Safety Website
-A multi-page women's safety awareness website built as a final semester college project using only HTML, CSS, and JavaScript (no frameworks).
+# SheShield - Women Safety Awareness Website
 
-Project Overview
-SheShield is an educational web platform that empowers women with safety knowledge, emergency contacts, and a tool to report incidents. The website is fully responsive and works on desktop, tablet, and mobile browsers.
+## Project Overview
 
-Features
-6 fully working pages with smooth navigation
-Form validation for contact and report forms
-Dark mode toggle with preference saved in browser
-Animated stats counter on the home page
-Expandable safety tips with show/hide details
-Emergency dial buttons that open the phone dialer on mobile
-Incident report form that saves data in browser localStorage
-Console logging of submitted reports for easy debugging
-Responsive design for all screen sizes
-Beginner-friendly commented code for easy learning
-Project Structure
+SheShield is a simple multi-page responsive website developed to spread awareness about women’s safety and provide easy access to important safety resources. The website is designed as a college final semester project and focuses on delivering useful information in a clean and user-friendly format.
+
+The main objective of this project is to educate users about safety precautions, emergency helpline numbers, and reporting incidents through a structured digital platform.
+
+---
+
+## Features
+
+* Multi-page website structure
+* Responsive design for mobile and desktop
+* Easy navigation with navbar
+* Safety tips for daily life and online safety
+* Emergency contact information
+* Incident report form
+* About and Contact pages
+* Placeholder spaces for images
+* Basic JavaScript interactivity
+* Simple and easy-to-understand UI
+
+---
+
+## Pages Included
+
+1. **Home Page**
+   Introduction of SheShield and website purpose.
+
+2. **Safety Tips Page**
+   Personal safety, travel safety, and online safety tips.
+
+3. **Emergency Contacts Page**
+   Important helpline numbers and support services.
+
+4. **Report Incident Page**
+   Form to report safety concerns.
+
+5. **About Page**
+   Project goals and future scope.
+
+6. **Contact Page**
+   Contact form and basic details.
+
+---
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript
+
+---
+
+## JavaScript Concepts Implemented
+
+* Variables (`var`, `let`, `const`)
+* Data types
+* Arrays and Objects
+* Functions
+* Arrow Functions
+* Loops (`for`, `while`)
+* Conditional statements (`if/else`)
+* DOM Manipulation
+* Event Handling
+* Form Validation
+* Alerts
+* JSON (`JSON.stringify()`, `JSON.parse()`)
+* localStorage
+
+---
+
+## Folder Structure
+
+```text id="yq6ez9"
 SheShield/
-├── index.html              ← Home page
-├── style.css               ← All shared styles
-├── script.js               ← All shared JavaScript
-├── tips.html               ← Safety Tips page
-├── emergency.html          ← Emergency Contacts page
-├── report.html             ← Report Incident page
-├── about.html              ← About page
-├── contact.html            ← Contact page
-└── images/                 ← Folder with all images
-    ├── home.png
-    ├── tips.png
-    ├── emergency.png
-    ├── report.png
-    ├── about.png
-    └── contact.png
+│── index.html
+│── safetytips.html
+│── contacts.html
+│── report.html
+│── about.html
+│── contact.html
+│── style.css
+│── script.js
+│── images/
+```
 
-How to Run
-Option 1: Direct Browser
-Download all files into one folder
-Double-click index.html to open in browser
-Option 2: VS Code with Live Server (Recommended)
-Open the project folder in VS Code
-Install the Live Server extension
-Right-click on index.html → Open with Live Server
-The website opens automatically in your browser
-Live Server is recommended because it allows localStorage to work properly.
+---
 
-Design
-Color Palette: Purple (#6a0dad), Pink (#ff69b4), White
-Font: System default (Segoe UI / Arial)
-Layout: CSS Grid and Flexbox
-Theme: Light mode (default) and Dark mode
-JavaScript Concepts Used
-This project demonstrates many core JavaScript concepts:
+## How to Run the Project
 
-Concept	Where Used
-Variables (var, let, const)	Throughout script.js
-Functions	All pages
-Arrays	Reports list, emergency contacts
-Objects	Each report and contact
-Loops (for, forEach)	Displaying reports and tips
-DOM Manipulation	Updating page content dynamically
-addEventListener	Buttons, forms, hamburger menu
-Form Validation	Report and Contact forms
-Alerts and confirms	User feedback
-localStorage	Saving reports and dark mode
-JSON.parse / JSON.stringify	Storing arrays of objects
-Conditional statements	Validation logic
-String methods	Email validation
-setInterval / setTimeout	Animated counter
-Console.log / console.table	Debugging report submissions
-Pages
-Home (index.html) — Welcome banner, mission, animated stats, awareness section
-Safety Tips (tips.html) — Categorized tips with expandable details
-Emergency Contacts (emergency.html) — Important helpline numbers with click-to-dial
-Report Incident (report.html) — Form to report incidents (saved in browser)
-About (about.html) — Project info and team section
-Contact (contact.html) — Contact form and FAQ section
-Dark Mode
-Click the Dark Mode button in the navbar to toggle between light and dark themes. Your choice is saved in localStorage and remembered the next time you open the site.
+1. Download or copy all project files into one folder.
+2. Open the folder in Visual Studio Code.
+3. Open `index.html` in browser.
+4. Navigate through pages using navbar.
 
-Report Incident Form
-Fill the form and click Submit Report
-The report is saved in your browser's localStorage
-All past reports appear in the table below the form
-Press F12 → Console tab to see report data printed
-Click Clear All Reports to delete all saved reports
-Technologies Used
-HTML5 — Page structure
-CSS3 — Styling, Flexbox, Grid, Variables, Transitions
-JavaScript (ES5/ES6) — All interactivity and logic
-localStorage API — Browser-based data storage
-JSON — Data format for storage
-Project Information
-Project Title: SheShield - Women's Safety Website
-Type: Final Semester Viva Project
-Course: Bachelor of Computer Science (BCA / B.Tech / BSc)
-Year: 2025
-Frameworks: None (pure HTML, CSS, JS)
-What I Learned
-Building multi-page websites with shared CSS and JS files
-Form validation using JavaScript
-Working with localStorage to persist user data
-DOM manipulation and event handling
-Responsive design using CSS Grid and Flexbox
-Theme toggling and saving user preferences
-Working with JSON data structures
-Acknowledgements
-This project was created for educational purposes to spread awareness about women's safety. Thanks to the resources and tutorials that made this possible.
+---
 
-Important Helplines (India)
-Women Helpline: 1091
-Police: 100
-Ambulance: 102
-National Emergency: 112
-Made with 💜 for women's safety awareness
+## Future Enhancements
+
+* Add backend database integration
+* Real incident report submission
+* Live location sharing
+* Emergency SOS button
+* Chat support
+* AI safety chatbot
+
+---
+
+## Purpose of Project
+
+This project aims to combine technology and social awareness by promoting women’s safety, empowerment, and knowledge through an easy-to-use website.
+
+---
+
+## Author
+
+Developed by **Ridhi and Hardik**
+
