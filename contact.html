@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>✉️ Contact Us</h1>
+    <p>Have questions or suggestions? We would love to hear from you</p>
+  </div>
+
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="contact.png" alt="Contact Us" onerror="this.parentElement.innerHTML='[ Add Contact Page Image Here ]'" />
+    </div>
+  </div>
+
+  <!-- ==================== CONTACT CONTENT ==================== -->
+  <div class="container">
+
+    <!-- Two-column layout: form on left, info on right -->
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:30px; align-items:start;">
+
+      <!-- LEFT: Contact Form -->
+      <div>
+        <h2 class="section-title">Send a Message</h2>
+        <p class="section-subtitle">We will get back to you as soon as possible</p>
+
+        <!-- Alert box shown by JS -->
+        <div class="alert-box" id="contactAlert"></div>
+
+        <div class="form-section" style="max-width:100%;">
+          <form id="contactForm">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="contactName">Full Name *</label>
+              <input
+                type="text"
+                id="contactName"
+                placeholder="Enter your full name"
+              />
+              <!-- JS shows this error when name is empty -->
+              <span class="error-msg" id="contactNameError"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="contactEmail">Email Address *</label>
+              <input
+                type="email"
+                id="contactEmail"
+                placeholder="yourname@email.com"
+              />
+              <span class="error-msg" id="contactEmailError"></span>
+            </div>
+
+            <!-- Phone (optional) -->
+            <div class="form-group">
+              <label for="contactPhone">Phone Number (Optional)</label>
+              <input
+                type="tel"
+                id="contactPhone"
+                placeholder="10-digit mobile number"
+              />
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="contactSubject">Subject *</label>
+              <input
+                type="text"
+                id="contactSubject"
+                placeholder="What is this about?"
+              />
+              <span class="error-msg" id="contactSubjectError"></span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label for="contactMessage">Your Message *</label>
+              <textarea
+                id="contactMessage"
+                placeholder="Write your message here..."
+                rows="5"
+              ></textarea>
+              <span class="error-msg" id="contactMessageError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Send Message</button>
+
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Information -->
+      <div>
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-subtitle">You can also reach us through</p>
+
+        <div class="card" style="margin-bottom:16px;">
+          <h3>📍 Address</h3>
+          <p style="margin-top:8px; color:var(--text-muted);">
+            Chitkara University<br/>
+            Department of Computer Science<br/>
+            Rajpura, Punjab - 140401<br/>
+            India
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom:16px;">
+          <h3>📧 Email</h3>
+          <p style="margin-top:8px; color:var(--text-muted);">
+            ridhi3788.beai25@chitkara.edu.in<br/>
+            hardik2854.beai25@chitkara.edu.in
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom:16px;">
+          <h3>📞 Phone</h3>
+          <p style="margin-top:8px; color:var(--text-muted);">
+            +91 99964 68687<br/>
+            (Ridhi Jain)
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🕐 Office Hours</h3>
+          <p style="margin-top:8px; color:var(--text-muted);">
+            Monday – Friday<br/>
+            9:00 AM – 4:00 PM<br/>
+            Closed on weekends & holidays
+          </p>
+        </div>
+
+        <!-- Image placeholder on right side -->
+        <div style="text-align:center; margin-top:20px;">
+          <div class="img-placeholder" style="height:200px;">
+            <img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg" alt="Location Map" onerror="this.parentElement.innerHTML='[ Add Map or Location Image Here ]'" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Section -->
+    <h2 class="section-title" style="margin-top:40px;">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Quick answers to common questions</p>
+
+    <div class="info-box">
+      <p><strong>Q: Is the incident report form safe?</strong><br/>
+      A: Yes. Reports are stored only on your device using browser localStorage. Nothing is sent to any server.</p>
+    </div>
+
+    <div class="info-box" style="margin-top:12px;">
+      <p><strong>Q: Can I use SheShield anonymously?</strong><br/>
+      A: Yes. The report form allows you to write "Anonymous" instead of your name.</p>
+    </div>
+
+    <div class="info-box" style="margin-top:12px;">
+      <p><strong>Q: Is this project open source?</strong><br/>
+      A: This is a college project created for educational purposes. You are welcome to learn from the code.</p>
+    </div>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

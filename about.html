@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>ℹ️ About SheShield</h1>
+    <p>Learn about our project, our mission, and our team</p>
+  </div>
+
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="about.png" alt="About SheShield" onerror="this.parentElement.innerHTML='[ Add About Page Banner Here ]'" />
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT CONTENT ==================== -->
+  <div class="container">
+
+    <!-- Project Mission -->
+    <h2 class="section-title">Our Mission</h2>
+    <p class="section-subtitle">Why we built SheShield</p>
+
+    <div class="info-box">
+      <p>SheShield was created as a final semester college project with one clear goal: <strong>to use technology for women's safety</strong>. We believe every woman deserves to feel safe — at home, in college, on the road, and online. This platform provides essential tools to help women stay informed and protected.</p>
+    </div>
+
+    <!-- About Project -->
+    <div class="card" style="margin-top:20px;">
+      <h3>📚 About This Project</h3>
+      <p style="margin-top:8px; line-height:1.8;">
+        SheShield is a <strong>multi-page static website</strong> built using only HTML, CSS, and JavaScript — no external libraries or frameworks. It demonstrates core web development concepts including:
+      </p>
+      <ul style="margin-top:12px; padding-left:20px; color:var(--text-muted); line-height:2;">
+        <li>Responsive web design</li>
+        <li>Form validation using JavaScript</li>
+        <li>console for data persistence</li>
+        <li>DOM manipulation</li>
+        <li>Event handling</li>
+        <li>Dark mode functionality</li>
+        <li>Arrays, Objects, and Loops in JavaScript</li>
+      </ul>
+    </div>
+
+    <!-- Technology Used -->
+    <h2 class="section-title" style="margin-top:35px;">Technology Used</h2>
+    <p class="section-subtitle">Built with basic web technologies</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>HTML5</h3>
+        <p>Structure and content of all 6 web pages. Uses semantic HTML elements like nav, section, footer.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎨</div>
+        <h3>CSS3</h3>
+        <p>Single shared stylesheet with CSS variables, flexbox, grid layout, and responsive media queries.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>JavaScript</h3>
+        <p>One shared JS file with functions, DOM manipulation, form validation, localStorage, and event handling.</p>
+      </div>
+    </div>
+
+    <!-- Second Image Placeholder -->
+    <div style="text-align:center; margin-top:30px;">
+      <h2 class="section-title">Our Approach</h2>
+      <div class="img-placeholder">
+        <img src="https://www.diakofam.net/wp-content/uploads/2022/12/social_approach.png" alt="Our Approach" onerror="this.parentElement.innerHTML='[ Add Approach Image Here ]'" />
+      </div>
+    </div>
+
+    <!-- ==================== TEAM SECTION ==================== -->
+    <h2 class="section-title" style="margin-top:35px;">Meet the Team</h2>
+    <p class="section-subtitle">Students who built this project</p>
+
+    <div class="cards-grid">
+
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <!-- Circular image placeholder - replace src with actual photo -->
+        <div class="team-img-placeholder">
+          <img src="Campus Image.png" alt="Team Member 1" onerror="this.style.display='none'; this.parentElement.textContent='Photo'" />
+        </div>
+        <h3>Ridhi Jain</h3>
+        <p>Project Lead & Frontend Developer</p>
+        <p style="color:var(--purple); margin-top:5px; font-size:0.85rem;">Roll No: 2510993788</p>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <div class="team-img-placeholder">
+          <img src="hardik.png" alt="Team Member 2" onerror="this.style.display='none'; this.parentElement.textContent='Photo'" />
+        </div>
+        <h3>Hardik Kaushal</h3>
+        <p>JavaScript Developer & Content Writer</p>
+        <p style="color:var(--purple); margin-top:5px; font-size:0.85rem;">Roll No: 2510992854</p>
+      </div>
+
+     
+
+    </div>
+
+    <!-- College Details -->
+    <div class="info-box" style="margin-top:30px;">
+      <p>🏫 <strong>College:</strong> Chitkara University</p>
+      <p style="margin-top:6px;">📖 <strong>Department:</strong> Department of Computer Science AI/ML</p>
+      <p style="margin-top:6px;">📅 <strong>Year:</strong> Semester II — 2025-26</p>
+      <p style="margin-top:6px;">👩‍🏫 <strong>Guide:</strong> Prof. Ms. Shilpi</p>
+    </div>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

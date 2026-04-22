@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - Safety Tips</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Extra styles for tips page */
+    .tip-item {
+      background-color: var(--white);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+      border-left: 5px solid var(--purple-light);
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+
+    .tip-item h3 {
+      color: var(--purple);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* The detailed tip text (hidden by default, toggled by JS) */
+    .tip-detail {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    /* Read More button */
+    .tip-toggle-btn {
+      background-color: var(--purple-light);
+      color: var(--white);
+      border: none;
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      margin-top: 8px;
+      transition: background-color 0.2s;
+    }
+
+    .tip-toggle-btn:hover {
+      background-color: var(--purple);
+    }
+
+    /* Category badge */
+    .badge {
+      display: inline-block;
+      background-color: var(--pink);
+      color: var(--white);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>🛡️ Safety Tips</h1>
+    <p>Practical advice to help you stay safe in different situations</p>
+  </div>
+
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="tips.png" alt="Safety Tips" onerror="this.parentElement.innerHTML='[ Add Safety Image Here ]'" />
+    </div>
+  </div>
+
+  <!-- ==================== TIPS CONTENT ==================== -->
+  <div class="container">
+
+    <div class="info-box">
+      <p>💡 Click <strong>"Read More"</strong> on any tip to see detailed advice. Knowledge is your best protection!</p>
+    </div>
+
+    <!-- ---- PERSONAL SAFETY SECTION ---- -->
+    <h2 class="section-title">Personal Safety</h2>
+    <p class="section-subtitle">Tips for staying safe in your daily life</p>
+
+    <!-- Tip 1 -->
+    <div class="tip-item">
+      <h3>📱 Always Keep Your Phone Charged <span class="badge">Basic</span></h3>
+      <p>Your phone is your lifeline in an emergency. Always ensure it has battery.</p>
+      <button class="tip-toggle-btn" data-target="tip1Detail">Read More ▼</button>
+      <!-- Detailed content - hidden by default, JS toggles it -->
+      <div class="tip-detail" id="tip1Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Keep a portable charger (power bank) in your bag.</li>
+          <li>Save emergency contacts on speed dial.</li>
+          <li>Enable location sharing with trusted family members.</li>
+          <li>Install a safety app like bSafe or Shake2Safety on your phone.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tip 2 -->
+    <div class="tip-item">
+      <h3>🚶 Walk Confidently and Stay Aware <span class="badge">Public</span></h3>
+      <p>Body language matters. Walk with purpose and keep your surroundings in check.</p>
+      <button class="tip-toggle-btn" data-target="tip2Detail">Read More ▼</button>
+      <div class="tip-detail" id="tip2Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Avoid using headphones at full volume in isolated areas.</li>
+          <li>Walk in well-lit, busy streets whenever possible.</li>
+          <li>Make eye contact briefly — it shows confidence.</li>
+          <li>Trust your instincts. If something feels wrong, move away.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tip 3 -->
+    <div class="tip-item">
+      <h3>🔑 Self-Defense Basics <span class="badge">Safety</span></h3>
+      <p>Learn basic self-defense techniques and carry legal safety tools.</p>
+      <button class="tip-toggle-btn" data-target="tip3Detail">Read More ▼</button>
+      <div class="tip-detail" id="tip3Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Consider enrolling in a basic self-defense class.</li>
+          <li>Carry a whistle or safety alarm in your bag.</li>
+          <li>Know where to strike in case of attack: eyes, nose, throat, groin, knees.</li>
+          <li>Practice awareness — most attacks can be avoided by spotting danger early.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ---- TRAVEL SAFETY SECTION ---- -->
+    <h2 class="section-title" style="margin-top:30px;">Travel Safety</h2>
+    <p class="section-subtitle">Stay safe while commuting and traveling</p>
+
+    <!-- Tip 4 -->
+    <div class="tip-item">
+      <h3>🚕 Cab & Auto Rickshaw Safety <span class="badge">Travel</span></h3>
+      <p>Follow safety practices every time you book or board a cab.</p>
+      <button class="tip-toggle-btn" data-target="tip4Detail">Read More ▼</button>
+      <div class="tip-detail" id="tip4Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Always verify the cab number and driver photo before getting in.</li>
+          <li>Share your live location with a trusted contact during the ride.</li>
+          <li>Prefer sitting behind the driver, not next to them.</li>
+          <li>Trust app-based cabs (Ola/Uber) over random autos at night.</li>
+          <li>Keep emergency number on speed dial during rides.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tip 5 -->
+    <div class="tip-item">
+      <h3>🚌 Bus & Public Transport Safety <span class="badge">Travel</span></h3>
+      <p>Buses can be crowded. Know how to stay safe in public transport.</p>
+      <button class="tip-toggle-btn" data-target="tip5Detail">Read More ▼</button>
+      <div class="tip-detail" id="tip5Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Choose seats near the driver or conductor.</li>
+          <li>Stay in well-lit areas of stations and bus stops.</li>
+          <li>If harassed, speak up loudly — public attention deters attackers.</li>
+          <li>Use women-only compartments wherever available.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ---- ONLINE SAFETY SECTION ---- -->
+    <h2 class="section-title" style="margin-top:30px;">Online Safety</h2>
+    <p class="section-subtitle">Protect yourself in the digital world</p>
+
+    <!-- Tip 6 -->
+    <div class="tip-item">
+      <h3>💻 Protect Your Digital Privacy <span class="badge">Online</span></h3>
+      <p>Cyberstalking and online harassment are real threats. Stay protected.</p>
+      <button class="tip-toggle-btn" data-target="tip6Detail">Read More ▼</button>
+      <div class="tip-detail" id="tip6Detail">
+        <ul style="padding-left:18px; margin-top:8px;">
+          <li>Keep your social media accounts private.</li>
+          <li>Do not share your location, home address, or daily routine publicly.</li>
+          <li>Block and report any user who harasses you online.</li>
+          <li>Use strong, unique passwords for all your accounts.</li>
+          <li>Enable two-factor authentication on all platforms.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IMAGE PLACEHOLDER -->
+    <div style="text-align:center; margin-top:30px;">
+      <h2 class="section-title">Stay Informed</h2>
+      <div class="img-placeholder">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/6eab2c206783569.Y3JvcCwxMDI0LDgwMCwwLDMwOQ.jpg" alt="Stay Safe Infographic" onerror="this.parentElement.innerHTML='[ Add Infographic Image Here ]'" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

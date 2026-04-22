@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - Report Incident</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>📋 Report an Incident</h1>
+    <p>Your report is saved securely on your device using console</p>
+  </div>
+
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="report.png" alt="Report Incident" onerror="this.parentElement.innerHTML='[ Add Report Page Image Here ]'" />
+    </div>
+  </div>
+
+  <!-- ==================== REPORT FORM ==================== -->
+  <div class="container">
+
+    <div class="info-box">
+      <p>📝 Fill in the form below to report an incident. Your data is stored <strong>only on your console</strong> . It is not sent to any server. You can view past reports below the form.</p>
+    </div>
+
+    <!-- Alert box - shown by JavaScript -->
+    <div class="alert-box" id="reportAlert"></div>
+
+    <!-- Report Form -->
+    <div class="form-section">
+      <h2 style="color: var(--purple); margin-bottom:20px;">Submit Your Report</h2>
+
+      <form id="reportForm">
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="reportName">Your Name (or Anonymous)</label>
+          <input
+            type="text"
+            id="reportName"
+            placeholder="Enter your name or write 'Anonymous'"
+          />
+          <!-- Error message shown by JS when validation fails -->
+          <span class="error-msg" id="reportNameError"></span>
+        </div>
+
+        <!-- Incident Type Dropdown -->
+        <div class="form-group">
+          <label for="reportType">Type of Incident</label>
+          <select id="reportType">
+            <option value="">-- Select Incident Type --</option>
+            <option value="Harassment">Street Harassment</option>
+            <option value="Stalking">Stalking</option>
+            <option value="Domestic Violence">Domestic Violence</option>
+            <option value="Cyber Crime">Cyber Crime / Online Harassment</option>
+            <option value="Eve Teasing">Eve Teasing</option>
+            <option value="Physical Assault">Physical Assault</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="error-msg" id="reportTypeError"></span>
+        </div>
+
+        <!-- Date Field -->
+        <div class="form-group">
+          <label for="reportDate">Date of Incident</label>
+          <input type="date" id="reportDate" />
+        </div>
+
+        <!-- Location Field -->
+        <div class="form-group">
+          <label for="reportLocation">Location / Area</label>
+          <input
+            type="text"
+            id="reportLocation"
+            placeholder="e.g. Near City Mall, MG Road"
+          />
+          <span class="error-msg" id="reportLocationError"></span>
+        </div>
+
+        <!-- Description Field -->
+        <div class="form-group">
+          <label for="reportDesc">Describe What Happened</label>
+          <textarea
+            id="reportDesc"
+            placeholder="Please describe the incident in your own words."
+            rows="5"
+          ></textarea>
+          <span class="error-msg" id="reportDescError"></span>
+        </div>
+
+        <!-- Contact (optional) -->
+        <div class="form-group">
+          <label for="reportContact">Your Contact (Optional)</label>
+          <input
+            type="text"
+            id="reportContact"
+            placeholder="Phone or email (optional - leave blank for anonymous)"
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Report</button>
+
+      </form>
+    </div>
+
+    <!-- ==================== SAVED REPORTS TABLE ==================== -->
+    <div style="margin-top: 40px;">
+      <h2 class="section-title">Previously Submitted Reports</h2>
+      <p class="section-subtitle">These are stored in your browser's console.</p>
+
+      <!-- Table populated by JavaScript -->
+      <table class="reports-table">
+        <thead>
+          <tr>
+            <th>Date Submitted</th>
+            <th>Incident Type</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <!-- tbody is filled by JS using savedReports array -->
+        <tbody id="reportsBody">
+        </tbody>
+      </table>
+
+      <!-- Clear all reports button -->
+      <div style="text-align:right; margin-top:12px;">
+        <button class="btn" id="clearReportsBtn" style="background-color:#cc0000; font-size:0.85rem; padding:8px 18px;">
+          🗑 Clear All Reports
+        </button>
+      </div>
+    </div>
+
+    <!-- IMAGE PLACEHOLDER -->
+    <div style="text-align:center; margin-top:30px;">
+      <div class="img-placeholder">
+        <img src="https://www.ukitservice.co.uk/wp-content/uploads/2023/06/technical-support-company.jpg" alt="Support Image" onerror="this.parentElement.innerHTML='[ Add Support Image Here ]'" />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

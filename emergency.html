@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - Emergency Contacts</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Dial button styling */
+    .dial-btn {
+      display: inline-block;
+      background-color: var(--purple);
+      color: var(--white);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+    .dial-btn:hover {
+      background-color: var(--pink);
+    }
+
+    /* Important note box */
+    .note-box {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 25px;
+    }
+    body.dark-mode .note-box {
+      background-color: #3a3000;
+      color: #f0c040;
+    }
+    .note-box p {
+      color: #7a5c00;
+      font-size: 0.93rem;
+    }
+    body.dark-mode .note-box p {
+      color: #f0c040;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== PAGE HEADER ==================== -->
+  <div class="page-header">
+    <h1>📞 Emergency Contacts</h1>
+    <p>Save these numbers — they can save your life</p>
+  </div>
+
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="emergency.png" alt="Emergency Help" onerror="this.parentElement.innerHTML='[ Add Emergency Image Here ]'" />
+    </div>
+  </div>
+
+  <!-- ==================== CONTACTS CONTENT ==================== -->
+  <div class="container">
+
+    <!-- Important Note -->
+    <div class="note-box">
+      <p>⚠️ <strong>Important:</strong> These are national helpline numbers for India. Save them in your phone now — not when you need them! In a real emergency, call immediately and give your location.</p>
+    </div>
+
+    <!-- ---- NATIONAL EMERGENCY NUMBERS ---- -->
+    <h2 class="section-title">National Emergency Helplines</h2>
+    <p class="section-subtitle">Available 24 hours, 7 days a week</p>
+
+    <!-- Contact Card 1 -->
+    <div class="contact-card">
+      <div class="contact-icon">🚨</div>
+      <div>
+        <h3>Police Emergency</h3>
+        <p>For immediate danger, theft, assault, or any crime</p>
+        <div class="phone-num">100</div>
+        <button class="dial-btn" data-number="100" data-name="Police Emergency">📞 Call 100</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 2 -->
+    <div class="contact-card">
+      <div class="contact-icon">🏥</div>
+      <div>
+        <h3>Ambulance</h3>
+        <p>Medical emergencies requiring immediate attention</p>
+        <div class="phone-num">108</div>
+        <button class="dial-btn" data-number="108" data-name="Ambulance">📞 Call 108</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 3 -->
+    <div class="contact-card">
+      <div class="contact-icon">🔥</div>
+      <div>
+        <h3>Fire Emergency</h3>
+        <p>For fire accidents and rescue operations</p>
+        <div class="phone-num">101</div>
+        <button class="dial-btn" data-number="101" data-name="Fire Brigade">📞 Call 101</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 4 -->
+    <div class="contact-card">
+      <div class="contact-icon">📱</div>
+      <div>
+        <h3>Universal Emergency Number</h3>
+        <p>Works from any phone including mobile. Connects to police/fire/ambulance.</p>
+        <div class="phone-num">112</div>
+        <button class="dial-btn" data-number="112" data-name="Universal Emergency">📞 Call 112</button>
+      </div>
+    </div>
+
+    <!-- ---- WOMEN-SPECIFIC HELPLINES ---- -->
+    <h2 class="section-title" style="margin-top:35px;">Women's Safety Helplines</h2>
+    <p class="section-subtitle">Specially for women in distress</p>
+
+    <!-- Contact Card 5 -->
+    <div class="contact-card">
+      <div class="contact-icon">👩</div>
+      <div>
+        <h3>Women Helpline (National)</h3>
+        <p>For women in distress — harassment, domestic violence, stalking</p>
+        <div class="phone-num">1091</div>
+        <button class="dial-btn" data-number="1091" data-name="Women Helpline">📞 Call 1091</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 6 -->
+    <div class="contact-card">
+      <div class="contact-icon">💜</div>
+      <div>
+        <h3>Domestic Violence Helpline</h3>
+        <p>Support for women facing domestic abuse and violence at home</p>
+        <div class="phone-num">181</div>
+        <button class="dial-btn" data-number="181" data-name="Domestic Violence Helpline">📞 Call 181</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 7 -->
+    <div class="contact-card">
+      <div class="contact-icon">🧒</div>
+      <div>
+        <h3>Child Helpline</h3>
+        <p>For children and girls in need of care and protection</p>
+        <div class="phone-num">1098</div>
+        <button class="dial-btn" data-number="1098" data-name="Child Helpline">📞 Call 1098</button>
+      </div>
+    </div>
+
+    <!-- Contact Card 8 -->
+    <div class="contact-card">
+      <div class="contact-icon">❤️</div>
+      <div>
+        <h3>iCall Mental Health Support</h3>
+        <p>Free counseling and mental health support for women in distress</p>
+        <div class="phone-num">9152987821</div>
+        <button class="dial-btn" data-number="9152987821" data-name="iCall Mental Health">📞 Call iCall</button>
+      </div>
+    </div>
+
+    <!-- ---- CYBER CRIME SECTION ---- -->
+    <h2 class="section-title" style="margin-top:35px;">Cyber Crime Helpline</h2>
+    <p class="section-subtitle">Report online harassment, morphed images, and cyber abuse</p>
+
+    <div class="contact-card">
+      <div class="contact-icon">💻</div>
+      <div>
+        <h3>Cyber Crime Helpline</h3>
+        <p>For reporting online fraud, cyber stalking, morphed pictures</p>
+        <div class="phone-num">1930</div>
+        <button class="dial-btn" data-number="1930" data-name="Cyber Crime Helpline">📞 Call 1930</button>
+      </div>
+    </div>
+
+    <!-- IMAGE PLACEHOLDER -->
+    <div style="text-align:center; margin-top:30px;">
+      <div class="img-placeholder">
+        <img src="https://www.bizresourcecenter.com/wp-content/uploads/2023/07/What-To-Include-in-Your-Emergency-Kit-100.jpg" alt="Emergency Resources" onerror="this.parentElement.innerHTML='[ Add Resource Image Here ]'" />
+      </div>
+    </div>
+
+    <div class="info-box" style="margin-top:25px;">
+      <p>📌 <strong>Pro Tip:</strong> Save at least 3 trusted contacts under a code name like "ICE" (In Case of Emergency) in your phone. Share your live location with them regularly.</p>
+    </div>
+
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

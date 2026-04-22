@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheShield - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar">
+    <div class="brand">She<span>Shield</span></div>
+    <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tips.html">Safety Tips</a></li>
+      <li><a href="emergency.html">Emergency Contacts</a></li>
+      <li><a href="report.html">Report Incident</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+    </ul>
+  </nav>
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <h1>Welcome to <span>SheShield</span></h1>
+    <p>Empowering women with safety knowledge, emergency contacts, and a platform to report incidents safely.</p>
+    <a href="tips.html" class="btn">Explore Safety Tips</a>
+    &nbsp;
+    <a href="report.html" class="btn" style="background-color: var(--purple-dark);">Report Incident</a>
+  </section>
+  <!-- ==================== IMAGE PLACEHOLDER ==================== -->
+  <!-- Replace src="" with your actual image path -->
+  <div class="container" style="text-align:center;">
+    <div class="img-placeholder">
+      <img src="home.png" alt="Women Safety Banner" onerror="this.parentElement.innerHTML='[ Add Your Banner Image Here ]'" />
+    </div>
+  </div>
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <div class="container">
+    <h2 class="section-title">What is SheShield?</h2>
+    <p class="section-subtitle">A college project dedicated to women's safety awareness and support.</p>
+    <div class="info-box">
+      <p>SheShield is a web-based platform that provides women with safety tips, emergency helpline numbers, and a way to report incidents anonymously. Our goal is to create awareness and help women stay safe.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Safety Tips</h3>
+        <p>Learn practical safety tips for home, travel, and public places. Be prepared and stay aware.</p>
+        <br/>
+        <a href="tips.html" class="btn" style="font-size:0.85rem; padding:8px 18px;">Read Tips</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📞</div>
+        <h3>Emergency Contacts</h3>
+        <p>Quick access to police, helplines, and emergency numbers. Save them before you need them.</p>
+        <br/>
+        <a href="emergency.html" class="btn" style="font-size:0.85rem; padding:8px 18px;">View Contacts</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Report Incident</h3>
+        <p>Securely submit a report about any incident. Your information is stored safely on your device.</p>
+        <br/>
+        <a href="report.html" class="btn" style="font-size:0.85rem; padding:8px 18px;">Report Now</a>
+      </div>
+    </div>
+  </div>
+  <!-- ==================== STATS SECTION ==================== -->
+  <!-- JS animates these numbers on page load -->
+  <div style="background-color: var(--purple); color: var(--white); padding: 40px 20px; text-align:center; margin-top:30px;" id="statsSection">
+    <h2 style="margin-bottom:30px;">Our Impact</h2>
+    <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
+      <div>
+        <div style="font-size:2.5rem; font-weight:bold; color:var(--pink);" id="stat1">0</div>
+        <div style="font-size:0.95rem; opacity:0.85;">Women Helped</div>
+      </div>
+      <div>
+        <div style="font-size:2.5rem; font-weight:bold; color:var(--pink);" id="stat2">0</div>
+        <div style="font-size:0.95rem; opacity:0.85;">Safety Tips</div>
+      </div>
+      <div>
+        <div style="font-size:2.5rem; font-weight:bold; color:var(--pink);" id="stat3">0</div>
+        <div style="font-size:0.95rem; opacity:0.85;">Emergency Contacts</div>
+      </div>
+    </div>
+  </div>
+  <!-- ==================== SECOND IMAGE PLACEHOLDER ==================== -->
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">Awareness Campaigns</h2>
+    <p class="section-subtitle">We run awareness sessions and campaigns across colleges.</p>
+    <div class="img-placeholder">
+      <img src="https://sidecar.ai/hubfs/Imported_Blog_Media/nonprofit-awarness-campaign-e1662491303266.png" alt="Awareness Campaign" onerror="this.parentElement.innerHTML='[ Add Awareness Image Here ]'" />
+    </div>
+  </div>
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <p>&copy; 2026 SheShield - Women Safety Project</p>
+    <p>College Project | Designed for Awareness</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="tips.html">Safety Tips</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="report.html">Report</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

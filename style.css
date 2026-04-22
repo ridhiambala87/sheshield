@@ -1,0 +1,599 @@
+/* ===========================================
+   SheShield - Common Stylesheet
+   Author: Student Project
+   Purpose: Shared styles for all pages
+   =========================================== */
+
+/* --- CSS Variables for easy color management --- */
+:root {
+  --purple: #6a0dad;
+  --purple-light: #9b59b6;
+  --purple-dark: #4a0080;
+  --pink: #ff69b4;
+  --pink-light: #ffb6c1;
+  --white: #ffffff;
+  --bg-light: #fdf4ff;
+  --text-dark: #222222;
+  --text-muted: #666666;
+  --border: #ddd;
+  --shadow: rgba(106, 13, 173, 0.15);
+}
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+  --white: #1a1a2e;
+  --bg-light: #16213e;
+  --text-dark: #f0f0f0;
+  --text-muted: #aaaaaa;
+  --border: #444;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* --- Reset & Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===========================================
+   NAVBAR
+   =========================================== */
+.navbar {
+  background-color: var(--purple);
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.navbar .brand {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 15px 0;
+  letter-spacing: 1px;
+}
+
+.navbar .brand span {
+  color: var(--pink);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links li a {
+  color: var(--white);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  display: block;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.dark-toggle {
+  background-color: var(--pink);
+  color: var(--white);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.dark-toggle:hover {
+  background-color: var(--purple-light);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* ===========================================
+   HERO SECTION
+   =========================================== */
+.hero {
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: var(--white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: var(--pink);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  opacity: 0.9;
+}
+
+/* CTA Button */
+.btn {
+  display: inline-block;
+  background-color: var(--pink);
+  color: var(--white);
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--purple-dark);
+  transform: scale(1.03);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===========================================
+   IMAGE PLACEHOLDER BOX
+   (Add your image src inside the img tag)
+   =========================================== */
+.img-placeholder {
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  background-color: var(--pink-light);
+  border: 2px dashed var(--purple);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  font-size: 1rem;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ===========================================
+   MAIN CONTENT WRAPPER
+   =========================================== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: var(--purple);
+  margin-bottom: 10px;
+  border-left: 5px solid var(--pink);
+  padding-left: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* ===========================================
+   CARDS
+   =========================================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px var(--shadow);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: var(--purple);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
+.card .card-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===========================================
+   FORMS
+   =========================================== */
+.form-section {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 3px 10px var(--shadow);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: var(--purple);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--purple);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.error-msg {
+  color: red;
+  font-size: 0.82rem;
+  margin-top: 4px;
+  display: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: var(--purple-dark);
+}
+
+/* ===========================================
+   ALERT / SUCCESS MESSAGE
+   =========================================== */
+.alert-box {
+  padding: 14px 20px;
+  border-radius: 6px;
+  margin: 15px 0;
+  font-weight: bold;
+  display: none;
+}
+
+.alert-box.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-box.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* ===========================================
+   EMERGENCY CONTACTS PAGE
+   =========================================== */
+.contact-card {
+  background-color: var(--white);
+  border-left: 5px solid var(--pink);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-card .contact-icon {
+  font-size: 2rem;
+  min-width: 45px;
+  text-align: center;
+}
+
+.contact-card h3 {
+  color: var(--purple);
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.contact-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.contact-card .phone-num {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--purple-dark);
+  margin-top: 5px;
+}
+
+/* ===========================================
+   ABOUT PAGE - Team section
+   =========================================== */
+.team-card {
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.team-card .team-img-placeholder {
+  width: 120px;
+  height: 120px;
+  background-color: var(--pink-light);
+  border: 2px dashed var(--purple);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  font-size: 0.75rem;
+  overflow: hidden;
+}
+
+.team-card .team-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-card h3 {
+  color: var(--purple);
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+/* ===========================================
+   INFO BOX
+   =========================================== */
+.info-box {
+  background-color: var(--pink-light);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin: 20px 0;
+  border-left: 4px solid var(--purple);
+}
+
+body.dark-mode .info-box {
+  background-color: #2d1b3d;
+}
+
+.info-box p {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+footer {
+  background-color: var(--purple-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+footer .footer-links a {
+  color: var(--pink-light);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+footer .footer-links a:hover {
+  color: var(--pink);
+}
+
+/* ===========================================
+   SAVED REPORTS TABLE
+   =========================================== */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px var(--shadow);
+}
+
+.reports-table th {
+  background-color: var(--purple);
+  color: var(--white);
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.reports-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.reports-table tr:last-child td {
+  border-bottom: none;
+}
+
+.reports-table tr:hover td {
+  background-color: var(--bg-light);
+}
+
+/* ===========================================
+   PAGE HEADER BANNER
+   =========================================== */
+.page-header {
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN (Mobile)
+   =========================================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--purple-dark);
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reports-table th,
+  .reports-table td {
+    font-size: 0.78rem;
+    padding: 8px 10px;
+  }
+}
