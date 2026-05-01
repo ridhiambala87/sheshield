@@ -58,6 +58,8 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+      <li><span id="navUserName" style="color:#ffb6c1; font-size:14px; padding:6px 10px; background:rgba(255,255,255,0.1); border-radius:16px;"></span></li>
+      <li><button onclick="ssLogout()" style="background:transparent; border:1px solid #ffb6c1; color:#ffb6c1; padding:6px 14px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:13px;">Logout</button></li>
     </ul>
   </nav>
 
@@ -70,7 +72,7 @@
   <!-- ==================== IMAGE PLACEHOLDER ==================== -->
   <div class="container" style="text-align:center;">
     <div class="img-placeholder">
-      <img src="emergency.png" alt="Emergency Help" onerror="this.parentElement.innerHTML='[ Add Emergency Image Here ]'" />
+      <img src="emergency.png" alt="Emergency Help" />
     </div>
   </div>
 
@@ -93,6 +95,7 @@
         <h3>Police Emergency</h3>
         <p>For immediate danger, theft, assault, or any crime</p>
         <div class="phone-num">100</div>
+        <!-- JS will show an alert when clicked -->
         <button class="dial-btn" data-number="100" data-name="Police Emergency">📞 Call 100</button>
       </div>
     </div>
@@ -195,10 +198,11 @@
     <!-- IMAGE PLACEHOLDER -->
     <div style="text-align:center; margin-top:30px;">
       <div class="img-placeholder">
-        <img src="https://www.bizresourcecenter.com/wp-content/uploads/2023/07/What-To-Include-in-Your-Emergency-Kit-100.jpg" alt="Emergency Resources" onerror="this.parentElement.innerHTML='[ Add Resource Image Here ]'" />
+        <img src="https://www.bizresourcecenter.com/wp-content/uploads/2023/07/What-To-Include-in-Your-Emergency-Kit-100.jpg" alt="Emergency Resources" />
       </div>
     </div>
 
+    <!-- Safety tip box -->
     <div class="info-box" style="margin-top:25px;">
       <p>📌 <strong>Pro Tip:</strong> Save at least 3 trusted contacts under a code name like "ICE" (In Case of Emergency) in your phone. Share your live location with them regularly.</p>
     </div>

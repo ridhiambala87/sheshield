@@ -20,6 +20,8 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+      <li><span id="navUserName" style="color:#ffb6c1; font-size:14px; padding:6px 10px; background:rgba(255,255,255,0.1); border-radius:16px;"></span></li>
+      <li><button onclick="ssLogout()" style="background:transparent; border:1px solid #ffb6c1; color:#ffb6c1; padding:6px 14px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:13px;">Logout</button></li>
     </ul>
   </nav>
 
@@ -32,7 +34,7 @@
   <!-- ==================== IMAGE PLACEHOLDER ==================== -->
   <div class="container" style="text-align:center;">
     <div class="img-placeholder">
-      <img src="contact.png" alt="Contact Us" onerror="this.parentElement.innerHTML='[ Add Contact Page Image Here ]'" />
+      <img src="contact.png" alt="Contact Us" />
     </div>
   </div>
 
@@ -61,7 +63,7 @@
                 id="contactName"
                 placeholder="Enter your full name"
               />
-              <!-- JS shows this error when name is empty -->
+              <!-- JS shows this error message when name is empty -->
               <span class="error-msg" id="contactNameError"></span>
             </div>
 
@@ -120,12 +122,13 @@
         <h2 class="section-title">Contact Information</h2>
         <p class="section-subtitle">You can also reach us through</p>
 
+        <!-- Info cards -->
         <div class="card" style="margin-bottom:16px;">
           <h3>📍 Address</h3>
           <p style="margin-top:8px; color:var(--text-muted);">
             Chitkara University<br/>
             Department of Computer Science<br/>
-            Rajpura, Punjab - 140401<br/>
+            Punjab - 140401<br/>
             India
           </p>
         </div>
@@ -142,7 +145,7 @@
           <h3>📞 Phone</h3>
           <p style="margin-top:8px; color:var(--text-muted);">
             +91 99964 68687<br/>
-            (Ridhi Jain)
+            (Ridhi Jain - Project Lead)
           </p>
         </div>
 
@@ -158,7 +161,7 @@
         <!-- Image placeholder on right side -->
         <div style="text-align:center; margin-top:20px;">
           <div class="img-placeholder" style="height:200px;">
-            <img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg" alt="Location Map" onerror="this.parentElement.innerHTML='[ Add Map or Location Image Here ]'" />
+            <img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2022/03/CUB4-Top-10-reasons-why-Chitkara-University-is-the-best-University-in-North-India.jpg" alt="Location Map" />
           </div>
         </div>
       </div>

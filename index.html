@@ -4,13 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SheShield - Home</title>
+  <!-- Link to common stylesheet (served from public/) -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar">
+    <!-- Site brand name -->
     <div class="brand">She<span>Shield</span></div>
+
+    <!-- Hamburger button (visible on mobile only) -->
     <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+
+    <!-- Navigation links -->
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="tips.html">Safety Tips</a></li>
@@ -19,30 +26,42 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+      <li><span id="navUserName" style="color:#ffb6c1; font-size:14px; padding:6px 10px; background:rgba(255,255,255,0.1); border-radius:16px;"></span></li>
+      <li><button onclick="ssLogout()" style="background:transparent; border:1px solid #ffb6c1; color:#ffb6c1; padding:6px 14px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:13px;">Logout</button></li>
     </ul>
   </nav>
+  <!-- ==================== END NAVBAR ==================== -->
+
   <!-- ==================== HERO SECTION ==================== -->
   <section class="hero">
     <h1>Welcome to <span>SheShield</span></h1>
     <p>Empowering women with safety knowledge, emergency contacts, and a platform to report incidents safely.</p>
+    <!-- CTA button - scroll to features -->
     <a href="tips.html" class="btn">Explore Safety Tips</a>
     &nbsp;
     <a href="report.html" class="btn" style="background-color: var(--purple-dark);">Report Incident</a>
   </section>
+  <!-- ==================== END HERO ==================== -->
+
   <!-- ==================== IMAGE PLACEHOLDER ==================== -->
-  <!-- Replace src="" with your actual image path -->
+  <!-- Replace the src="" with your actual image path -->
   <div class="container" style="text-align:center;">
     <div class="img-placeholder">
-      <img src="home.png" alt="Women Safety Banner" onerror="this.parentElement.innerHTML='[ Add Your Banner Image Here ]'" />
+      <img src="home.png" alt="Women Safety Banner" />
     </div>
   </div>
+
   <!-- ==================== ABOUT SECTION ==================== -->
   <div class="container">
     <h2 class="section-title">What is SheShield?</h2>
     <p class="section-subtitle">A college project dedicated to women's safety awareness and support.</p>
+
+    <!-- Information box -->
     <div class="info-box">
       <p>SheShield is a web-based platform that provides women with safety tips, emergency helpline numbers, and a way to report incidents anonymously. Our goal is to create awareness and help women stay safe.</p>
     </div>
+
+    <!-- Feature cards -->
     <div class="cards-grid">
       <div class="card">
         <div class="card-icon">🛡️</div>
@@ -51,6 +70,7 @@
         <br/>
         <a href="tips.html" class="btn" style="font-size:0.85rem; padding:8px 18px;">Read Tips</a>
       </div>
+
       <div class="card">
         <div class="card-icon">📞</div>
         <h3>Emergency Contacts</h3>
@@ -58,6 +78,7 @@
         <br/>
         <a href="emergency.html" class="btn" style="font-size:0.85rem; padding:8px 18px;">View Contacts</a>
       </div>
+
       <div class="card">
         <div class="card-icon">📋</div>
         <h3>Report Incident</h3>
@@ -67,8 +88,9 @@
       </div>
     </div>
   </div>
+
   <!-- ==================== STATS SECTION ==================== -->
-  <!-- JS animates these numbers on page load -->
+  <!-- JS will animate these numbers on page load -->
   <div style="background-color: var(--purple); color: var(--white); padding: 40px 20px; text-align:center; margin-top:30px;" id="statsSection">
     <h2 style="margin-bottom:30px;">Our Impact</h2>
     <div style="display:flex; justify-content:center; gap:60px; flex-wrap:wrap;">
@@ -86,18 +108,20 @@
       </div>
     </div>
   </div>
+
   <!-- ==================== SECOND IMAGE PLACEHOLDER ==================== -->
   <div class="container" style="text-align:center;">
     <h2 class="section-title">Awareness Campaigns</h2>
     <p class="section-subtitle">We run awareness sessions and campaigns across colleges.</p>
     <div class="img-placeholder">
-      <img src="https://sidecar.ai/hubfs/Imported_Blog_Media/nonprofit-awarness-campaign-e1662491303266.png" alt="Awareness Campaign" onerror="this.parentElement.innerHTML='[ Add Awareness Image Here ]'" />
+      <img src="https://sidecar.ai/hubfs/Imported_Blog_Media/nonprofit-awarness-campaign-e1662491303266.png" alt="Awareness Campaign" />
     </div>
   </div>
+
   <!-- ==================== FOOTER ==================== -->
   <footer>
     <p>&copy; 2026 SheShield - Women Safety Project</p>
-    <p>College Project | Designed for Awareness</p>
+    <p>Second Semester College Project | Designed for Awareness</p>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="tips.html">Safety Tips</a>
@@ -107,6 +131,10 @@
       <a href="contact.html">Contact</a>
     </div>
   </footer>
+  <!-- ==================== END FOOTER ==================== -->
+
+  <!-- Link to common JavaScript file (served from public/) -->
   <script src="script.js"></script>
+
 </body>
 </html>

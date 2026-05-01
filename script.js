@@ -16,6 +16,41 @@
    =========================================== */
 
 // =============================================
+// 0. AUTHENTICATION — Login / Logout / Auth Check
+//    Users stored in localStorage key: "ssUsers"
+//    Current session: "ssCurrentUser"
+// =============================================
+
+/* Check if user is logged in — redirect to login if not */
+function checkAuth() {
+  var user = localStorage.getItem("ssCurrentUser");
+  if (!user) {
+    window.location.href = "login.html";
+    return null;
+  }
+  return JSON.parse(user);
+}
+
+/* Logout — clear session and go to login page */
+function ssLogout() {
+  if (confirm("Are you sure you want to logout?")) {
+    console.log("SHESHIELD — User logged out:", new Date().toLocaleString());
+    localStorage.removeItem("ssCurrentUser");
+    window.location.href = "login.html";
+  }
+}
+
+/* Show the logged-in user's name in the navbar */
+function setupNavUserName() {
+  var pill = document.getElementById("navUserName");
+  if (!pill) return;
+  var user = JSON.parse(localStorage.getItem("ssCurrentUser"));
+  if (user) {
+    pill.textContent = "👤 " + user.name;
+  }
+}
+
+// =============================================
 // 1. DARK MODE TOGGLE
 //    Uses localStorage to remember preference
 // =============================================
@@ -78,6 +113,7 @@ function setActiveNavLink() {
 
 // =============================================
 // 4. FORM VALIDATION HELPER FUNCTIONS
+//    Used on Contact and Report pages
 // =============================================
 
 /* Show an error message under a field */
@@ -316,7 +352,7 @@ function setupReportForm() {
         status: "Submitted"
       };
 
-            savedReports.push(newReport); // Add to array
+      savedReports.push(newReport); // Add to array
       saveReports(); // Save to localStorage
       displayReports(); // Update the table
 
@@ -327,6 +363,9 @@ function setupReportForm() {
       console.table(savedReports);
 
       showAlert("reportAlert", "✓ Your report has been submitted and saved successfully!", "success");
+      form.reset(); // Clear form
+    } else {
+      showAlert("reportAlert", "✗ Please fix the errors above.", "error");
     }
   });
 
@@ -390,6 +429,7 @@ function setupEmergencyButtons() {
 
 // =============================================
 // 10. HOME PAGE - Animated Welcome Counter
+//     Simple DOM manipulation example
 // =============================================
 
 function setupHomeAnimations() {
@@ -428,14 +468,17 @@ function setupHomeAnimations() {
 // 11. RUN EVERYTHING ON PAGE LOAD
 // =============================================
 
+/* This runs when the page is fully loaded */
 window.addEventListener("load", function () {
-  applyDarkMode();         // Apply saved dark mode preference
-  setActiveNavLink();      // Highlight active page in navbar
-  setupContactForm();      // Setup contact form (only on contact.html)
-  setupReportForm();       // Setup report form (only on report.html)
-  setupTipsToggle();       // Setup tips toggle (only on tips.html)
+  checkAuth();           // Redirect to login if not logged in
+  setupNavUserName();    // Show logged-in user name in navbar
+  applyDarkMode();       // Apply saved dark mode preference
+  setActiveNavLink();    // Highlight active page in navbar
+  setupContactForm();    // Setup contact form (only on contact.html)
+  setupReportForm();     // Setup report form (only on report.html)
+  setupTipsToggle();     // Setup tips toggle (only on tips.html)
   setupEmergencyButtons(); // Setup dial buttons (only on emergency.html)
-  setupHomeAnimations();   // Animate stats (only on index.html)
+  setupHomeAnimations(); // Animate stats (only on index.html)
 
   // Add click event for dark mode toggle button
   var darkBtn = document.getElementById("darkToggleBtn");

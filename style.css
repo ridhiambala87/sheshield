@@ -68,6 +68,7 @@ ul {
   box-shadow: 0 2px 8px var(--shadow);
 }
 
+/* Site logo/brand name */
 .navbar .brand {
   color: var(--white);
   font-size: 1.6rem;
@@ -80,6 +81,7 @@ ul {
   color: var(--pink);
 }
 
+/* Nav links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -101,6 +103,7 @@ ul {
   color: var(--white);
 }
 
+/* Dark mode toggle button */
 .dark-toggle {
   background-color: var(--pink);
   color: var(--white);
@@ -117,6 +120,7 @@ ul {
   background-color: var(--purple-light);
 }
 
+/* Mobile hamburger (simple) */
 .hamburger {
   display: none;
   font-size: 1.5rem;
@@ -127,7 +131,7 @@ ul {
 }
 
 /* ===========================================
-   HERO SECTION
+   HERO SECTION (used on Home page)
    =========================================== */
 .hero {
   background: linear-gradient(135deg, var(--purple), var(--purple-light));
@@ -177,7 +181,7 @@ ul {
 
 /* ===========================================
    IMAGE PLACEHOLDER BOX
-   (Add your image src inside the img tag)
+   (Leave this box — add your own image src)
    =========================================== */
 .img-placeholder {
   width: 100%;
@@ -195,6 +199,7 @@ ul {
   overflow: hidden;
 }
 
+/* If a real <img> is inside the placeholder */
 .img-placeholder img {
   width: 100%;
   height: 100%;
@@ -211,6 +216,7 @@ ul {
   padding: 30px 20px;
 }
 
+/* Section titles */
 .section-title {
   font-size: 1.8rem;
   color: var(--purple);
@@ -226,7 +232,7 @@ ul {
 }
 
 /* ===========================================
-   CARDS
+   CARDS (used on Tips, About, etc.)
    =========================================== */
 .cards-grid {
   display: grid;
@@ -313,13 +319,15 @@ ul {
   min-height: 100px;
 }
 
+/* Error message below fields */
 .error-msg {
   color: red;
   font-size: 0.82rem;
   margin-top: 4px;
-  display: none;
+  display: none; /* shown by JS when needed */
 }
 
+/* Submit button */
 .submit-btn {
   width: 100%;
   background-color: var(--purple);
@@ -338,14 +346,14 @@ ul {
 }
 
 /* ===========================================
-   ALERT / SUCCESS MESSAGE
+   ALERT / SUCCESS MESSAGE (shown by JS)
    =========================================== */
 .alert-box {
   padding: 14px 20px;
   border-radius: 6px;
   margin: 15px 0;
   font-weight: bold;
-  display: none;
+  display: none; /* JS will show/hide this */
 }
 
 .alert-box.success {
@@ -443,7 +451,7 @@ ul {
 }
 
 /* ===========================================
-   INFO BOX
+   INFO BOX (used on various pages)
    =========================================== */
 .info-box {
   background-color: var(--pink-light);
@@ -498,7 +506,7 @@ footer .footer-links a:hover {
 }
 
 /* ===========================================
-   SAVED REPORTS TABLE
+   SAVED REPORTS TABLE (Report page)
    =========================================== */
 .reports-table {
   width: 100%;
@@ -534,7 +542,7 @@ footer .footer-links a:hover {
 }
 
 /* ===========================================
-   PAGE HEADER BANNER
+   PAGE HEADER BANNER (for inner pages)
    =========================================== */
 .page-header {
   background: linear-gradient(135deg, var(--purple), var(--purple-light));
@@ -557,6 +565,7 @@ footer .footer-links a:hover {
    RESPONSIVE DESIGN (Mobile)
    =========================================== */
 @media (max-width: 768px) {
+  /* Hide nav links on small screens */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -565,6 +574,7 @@ footer .footer-links a:hover {
     padding: 10px 0;
   }
 
+  /* When hamburger is clicked, show links */
   .nav-links.open {
     display: flex;
   }

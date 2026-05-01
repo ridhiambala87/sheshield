@@ -20,27 +20,30 @@
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><button class="dark-toggle" id="darkToggleBtn">🌙 Dark Mode</button></li>
+      <li><span id="navUserName" style="color:#ffb6c1; font-size:14px; padding:6px 10px; background:rgba(255,255,255,0.1); border-radius:16px;"></span></li>
+      <li><button onclick="ssLogout()" style="background:transparent; border:1px solid #ffb6c1; color:#ffb6c1; padding:6px 14px; border-radius:16px; cursor:pointer; font-family:inherit; font-size:13px;">Logout</button></li>
     </ul>
   </nav>
 
   <!-- ==================== PAGE HEADER ==================== -->
   <div class="page-header">
     <h1>📋 Report an Incident</h1>
-    <p>Your report is saved securely on your device using console</p>
+    <p>Your report is saved securely on your device using local storage</p>
   </div>
 
   <!-- ==================== IMAGE PLACEHOLDER ==================== -->
   <div class="container" style="text-align:center;">
     <div class="img-placeholder">
-      <img src="report.png" alt="Report Incident" onerror="this.parentElement.innerHTML='[ Add Report Page Image Here ]'" />
+      <img src="report.png" alt="Report Incident" />
     </div>
   </div>
 
   <!-- ==================== REPORT FORM ==================== -->
   <div class="container">
 
+    <!-- Info box explaining the form -->
     <div class="info-box">
-      <p>📝 Fill in the form below to report an incident. Your data is stored <strong>only on your console</strong> . It is not sent to any server. You can view past reports below the form.</p>
+      <p>📝 Fill in the form below to report an incident. Your data is stored <strong>only on your browser</strong> using localStorage. It is not sent to any server. You can view past reports below the form.</p>
     </div>
 
     <!-- Alert box - shown by JavaScript -->
@@ -60,7 +63,7 @@
             id="reportName"
             placeholder="Enter your name or write 'Anonymous'"
           />
-          <!-- Error message shown by JS when validation fails -->
+          <!-- Error message - shown by JS when validation fails -->
           <span class="error-msg" id="reportNameError"></span>
         </div>
 
@@ -83,7 +86,10 @@
         <!-- Date Field -->
         <div class="form-group">
           <label for="reportDate">Date of Incident</label>
-          <input type="date" id="reportDate" />
+          <input
+            type="date"
+            id="reportDate"
+          />
         </div>
 
         <!-- Location Field -->
@@ -102,7 +108,7 @@
           <label for="reportDesc">Describe What Happened</label>
           <textarea
             id="reportDesc"
-            placeholder="Please describe the incident in your own words."
+            placeholder="Please describe the incident in your own words. Be as detailed as you feel comfortable."
             rows="5"
           ></textarea>
           <span class="error-msg" id="reportDescError"></span>
@@ -117,19 +123,13 @@
             placeholder="Phone or email (optional - leave blank for anonymous)"
           />
         </div>
-
-        <!-- Submit Button -->
         <button type="submit" class="submit-btn">Submit Report</button>
 
       </form>
     </div>
-
-    <!-- ==================== SAVED REPORTS TABLE ==================== -->
     <div style="margin-top: 40px;">
       <h2 class="section-title">Previously Submitted Reports</h2>
-      <p class="section-subtitle">These are stored in your browser's console.</p>
-
-      <!-- Table populated by JavaScript -->
+      <p class="section-subtitle">These are stored in your browser's local storage</p>
       <table class="reports-table">
         <thead>
           <tr>
@@ -141,6 +141,7 @@
         </thead>
         <!-- tbody is filled by JS using savedReports array -->
         <tbody id="reportsBody">
+          <!-- Rows added here by JavaScript -->
         </tbody>
       </table>
 
@@ -155,7 +156,7 @@
     <!-- IMAGE PLACEHOLDER -->
     <div style="text-align:center; margin-top:30px;">
       <div class="img-placeholder">
-        <img src="https://www.ukitservice.co.uk/wp-content/uploads/2023/06/technical-support-company.jpg" alt="Support Image" onerror="this.parentElement.innerHTML='[ Add Support Image Here ]'" />
+        <img src="https://www.ukitservice.co.uk/wp-content/uploads/2023/06/technical-support-company.jpg" alt="Support Image" />
       </div>
     </div>
 
